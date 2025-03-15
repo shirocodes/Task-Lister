@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100vh;
+    color: #2e2e2e;
+    background-color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "backdrop";
+    min-height: 100vh;
+    width: 100%;
+    margin: 2rem;
+    overflow: hidden;
+    /* border: 0.6rem solid #2e2e2e;
+    border-radius: 2rem; */
+}
+
+.screen-backdrop {
+    display: grid;
+    grid-template-areas:"home" "tasks";
+    grid-template-rows: 1fr 1fr;
+    width: auto;
+    height: 30rem;
+
+    background-color: #dacb6a;
+    border-radius: 0 0 40% 40%;
+}
+
+.home-screen {
+    grid-area: home;
+    display: grid;
+    grid-template-areas: "welcome" "form";
+    grid-template-rows: 1fr auto;
+    /* gap: 1rem; */
+    margin: 0.5rem;
+    border: 1px solid red;
+}
+
+.welcome {
+    grid-area: welcome;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    border: 1px solid green;
+
+}
+/* sections inside .welcome */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.content .info {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid orange;
+}
+.content img {
+    height: auto;
+    max-width: 150px;
+}
+
+/* form styling */
+#create-task-form {
+    grid-area: form;
+    display: flex;
+    margin: 1rem;
+    border: 1px solid green;
+
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+}
+.inputs-one, .inputs-two {
+    display: flex;
+    justify-content: space-between;
+}
+.inputs-two #submit-btn {
+    font-size: 1rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 
+    background-color 0.4s ease-in,
+    transform 0.4s ease-out;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+#submit-btn:hover {
+    transform: scale(0.8);
+    background-color: olivedrab;
+}
+
+/* Styling the added tasks */
+.task-holder {
+    grid-area: tasks;
+    display: grid;
+    /* grid-template-rows: 1fr; */
+    margin: 0.5rem;
+    border: 1px solid blue ;
+}
+.to-dos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem;
+    border: 1px solid green;
+}
+
+@media (min-width: 370px) {
+    .container {
+        height: 45rem;
+        width: 45rem;
+        border: 0.6rem solid #2e2e2e;
+        border-radius: 2rem;
+    }
+}
