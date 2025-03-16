@@ -14,7 +14,7 @@
                     <div class="content">
                         <div class="info">
                             <h1> Hello User</h1>
-                            <p>Today you have 5 tasks</p>
+                            <p>What are your plans?</p>
                         </div>
                         <img src="assets/images/Young girl.webp" alt="User profile"
                         height="150px" width="150px">
@@ -24,8 +24,8 @@
                     <div class="inputs">
                         <div class="inputs-one">
                             <div class="task-info">
-                                <label for="new-task">Task:</label>
-                                <input type="text" id="new-task" 
+                                <label for="newTask">Task:</label>
+                                <input type="text" id="newTask" 
                                 name="new-task-description" placeholder="Enter Task">
                             </div>
                             <div class="selections">
@@ -33,6 +33,7 @@
                                     <option value="personal">Personal</option>
                                     <option value="work">Work</option>
                                 </select>
+                                <input type="color" name="toDoColor" value="#000000" placeholder="color">
                                 <select id="priority">
                                     <option value="high">High</option>
                                     <option value="medium">Medium</option>
@@ -42,18 +43,16 @@
                         </div>
                         <div class="inputs-two">
                             <div class="date-info">
-                                <label for="new-task-description">Due:</label>
-                                <input type="date" id="due-date">
+                                <label for="dueDate">Due:</label>
+                                <input type="date" id="dueDate">
                             </div>
                             <input id="submit-btn"  type="submit" value="Create New Task">
                         </div>
                     </div>
                 </form>
             </header>
-            <!-- List categories -->
             <main class="task-holder">
-                <div class="to-dos">
-                    <div id="lists">my lists</div>
+                <div id="todos"></div>
                 </div>
             </main>
         </div>

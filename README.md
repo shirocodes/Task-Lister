@@ -8,3 +8,11 @@
         #Development Tools
 The Tasklister uses HTML, CSS, and JAVASCRIPT
 
+        #Responsiveness
+1. max-width: 480px
+2. min-width: 481px and max-width: 768px
+3. min-width: 768px
+
+
+
+

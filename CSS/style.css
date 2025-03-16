@@ -165,7 +165,6 @@ body {
 .elements-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: ;
     width: 100%;
     padding: 0 0.4rem;
     gap: 0.5rem;
