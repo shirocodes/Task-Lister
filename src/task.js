@@ -21,7 +21,7 @@ function addTodos(e) {
 
     //Highlighting colors
     const colorPriority = {
-        'high': 'red',
+        'high': 'orange',
         'medium': 'blue',
         'low': 'green'
     }
@@ -41,7 +41,6 @@ function addTodos(e) {
  
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.classList.add('element')
     checkbox.addEventListener('change', () => showCompletion(currentTask));
 
     const currentTask = document.createElement('p');
@@ -50,24 +49,24 @@ function addTodos(e) {
 
     const handlePriority = document.createElement('h5')
     handlePriority.textContent = addPriority;
-    handlePriority.classList.add('element')
+    handlePriority.classList.add('element3')
     handlePriority.style.color = colorPriority[addPriority]
 
     const handleDeadline = document.createElement('p');
     handleDeadline.textContent = addTime;
-    handleDeadline.classList.add('element')
+    handleDeadline.classList.add('element4')
 
     const allowTaskDelete = document.createElement('button');
     allowTaskDelete.textContent = 'X';
-    allowTaskDelete.classList.add('element')
     allowTaskDelete.addEventListener('click', () => deleteTodo(holdTask));
 
     //append created elements into the task's wrapper
     holdCreatedElements.appendChild(checkbox);
     holdCreatedElements.appendChild(currentTask);
     holdCreatedElements.appendChild(handlePriority);
-    holdCreatedElements.appendChild(handleDeadline);
     holdCreatedElements.appendChild(allowTaskDelete);
+
+    categoryHeader.appendChild(handleDeadline);
 
     holdTask.appendChild(categoryHeader);
     holdTask.appendChild(holdCreatedElements);
@@ -77,6 +76,9 @@ function addTodos(e) {
 
     //empty user input after a submit
     e.target.newTask.value ='';
+    e.target.category.value='';
+    e.target.priority.value='';
+    e.target.dueDate.value='';
 };
 
 //handling the checkbox event and delete button 
